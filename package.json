@@ -1,0 +1,21 @@
+{
+  "name": "battery-config",
+  "version": "0.0.1",
+  "description": "A config to get started with Battery",
+  "main": "./dist/config.js",
+  "author": "Kilian McMahon",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.4",
+    "webpack-command": "^0.4.1"
+  },
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js",
+    "watch": "webpack --watch --config ./webpack.config.js"
+  }
+}
