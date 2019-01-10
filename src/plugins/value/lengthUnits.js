@@ -22,17 +22,12 @@ const unboundFormatPx = ({
     : addPixel(convertedUnit);
 };
 
-const aspectRatio = (width, height) => {
-  return `${(height / width) * 100}%`;
-};
-
 const unboundFormat = (baseFontSize, baselineUnit, useRems, useBaseline) => ({
   percent: addPercent,
   rem: addRem,
   pixel: unboundFormatPx({ baseFontSize, baselineUnit, useRems }),
   viewportHeight: addViewportHeight,
   viewportWidth: addViewportWidth,
-  aspectRatio: aspectRatio,
   baseline: unboundFormatPx({
     baseFontSize,
     baselineUnit,
@@ -80,14 +75,6 @@ const lengthUnitsPlugin = {
       indicator: 'vw',
       modifierFn: format.viewportWidth,
       sampleValues: ['10', '25', '75', '50', '100']
-    },
-    {
-      name: 'aspect ratio',
-      indicator: '\\d+',
-      separator: 'x',
-      modifierFn: aspectRatio,
-      sampleValues: ['16'],
-      sampleIndicatorValues: ['9']
     }
   ]
 };
