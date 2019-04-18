@@ -1,4 +1,4 @@
-const fontWeight = {
+const letterSpacing = {
   prop: 'letter-spacing',
   propName: 'ls',
   keywordValues: {
@@ -13,4 +13,4 @@ const fontWeight = {
   }
 }
 
-export default fontWeight;
+export default letterSpacing;
